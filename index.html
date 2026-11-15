@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uzair Saleem | Data Analytics Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f9ff;--surface:#fff;--text:#1e2a3a;--muted:#5c6b80;--accent:#4f8ef7;--accent2:#7ad9c4;--soft:#e4f0ff;--border:#d9e6f5;--shadow:0 10px 30px rgba(79,142,247,.12);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1724;--surface:#172236;--text:#e8eef8;--muted:#9fb0c8;--soft:#1d2d47;--border:#26364f;--shadow:0 10px 30px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0f1724;--surface:#172236;--text:#e8eef8;--muted:#9fb0c8;--soft:#1d2d47;--border:#26364f;--shadow:0 10px 30px rgba(0,0,0,.35)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;line-height:1.2}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.2rem Poppins,sans-serif;color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;padding:0}
+nav a.l{font-size:.93rem;font-weight:500;color:var(--muted)}
+nav a.l:hover{color:var(--accent)}
+.tools{display:flex;gap:10px;align-items:center}
+button{font:inherit;cursor:pointer}
+.icon{width:38px;height:38px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+#menu{display:none}
+section{padding:80px 0}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin:6px 0 32px}
+.hero{padding:90px 0 70px;background:radial-gradient(circle at 85% 10%,rgba(122,217,196,.35),transparent 45%),radial-gradient(circle at 10% 90%,rgba(79,142,247,.22),transparent 45%)}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font:600 1.2rem Poppins,sans-serif;margin:14px 0;color:var(--muted);min-height:1.8em}
+.role b{color:var(--accent)}
+.hero p.lead{color:var(--muted);max-width:520px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 24px;border-radius:999px;font-weight:600;border:1px solid var(--accent);transition:transform .2s,box-shadow .2s}
+.btn.p{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+.btn.s{color:var(--accent);background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{text-align:center;padding:22px 10px}
+.stat strong{display:block;font:700 2rem Poppins,sans-serif;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.about p+p{margin-top:14px}
+.about p{color:var(--muted)}
+.skill{margin-bottom:16px}
+.skill div{display:flex;justify-content:space-between;font-weight:500;font-size:.93rem;margin-bottom:6px}
+.bar{height:9px;background:var(--soft);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1.2s ease}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{padding:6px 14px;border-radius:999px;background:var(--soft);font-size:.85rem;font-weight:500;color:var(--accent)}
+.tl{border-left:3px solid var(--accent2);padding-left:22px}
+.tl h3{font-size:1.1rem}
+.tl small{color:var(--accent);font-weight:600}
+.tl p{color:var(--muted);margin-top:8px;font-size:.95rem}
+.proj .tag{display:inline-block;margin:12px 6px 0 0}
+.proj ul{margin:14px 0 0 18px;color:var(--muted)}
+.contact .grid2{align-items:start}
+.row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--border)}
+.row:last-child{border:0}
+.row em{font-style:normal;width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:1.1rem}
+.row small{display:block;color:var(--muted)}
+form{display:grid;gap:12px}
+input,textarea{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+footer{text-align:center;padding:28px 20px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:760px){
+.hero .wrap,.grid2{grid-template-columns:1fr}
+#menu{display:inline-block}
+nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--surface);border-bottom:1px solid var(--border);padding:8px 20px}
+nav ul.open{display:flex}
+nav ul a{display:block;padding:12px 0}
+section{padding:60px 0}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="#home" class="logo">Uzair.</a>
+<ul id="links">
+<li><a class="l" href="#about">About</a></li><li><a class="l" href="#skills">Skills</a></li><li><a class="l" href="#education">Education</a></li><li><a class="l" href="#projects">Projects</a></li><li><a class="l" href="#contact">Contact</a></li>
+</ul>
+<div class="tools"><button class="icon" id="theme" aria-label="Toggle theme">☾</button><button class="icon" id="menu" aria-label="Menu">☰</button></div>
+</nav></div></header>
+
+<section class="hero" id="home"><div class="wrap">
+<div>
+<p class="eyebrow">Hello, I’m</p>
+<h1><span>Uzair Saleem</span></h1>
+<p class="role">Aspiring <b id="typed"></b></p>
+<p class="lead">BS Data Analytics student at Emerson University, Multan. I turn raw data into clear insights using Python, R, and statistics.</p>
+<div class="btns"><a class="btn p" href="#projects">View My Work</a><a class="btn s" href="#contact">Get in Touch</a></div>
+</div>
+<div class="stats">
+<div class="card stat"><strong>3.76</strong><span>Current CGPA</span></div>
+<div class="card stat"><strong>5th</strong><span>Semester</span></div>
+<div class="card stat"><strong>2</strong><span>Languages: Python &amp; R</span></div>
+<div class="card stat"><strong>1+</strong><span>Data Projects</span></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap rv">
+<p class="eyebrow">About Me</p><h2>Curious about data, driven by insight</h2>
+<div class="card about"><p>I’m a motivated 5th-semester Data Analytics student with a solid foundation in statistics, Python, R, and data structures and algorithms. I enjoy cleaning, analyzing, and visualizing data to uncover meaningful patterns.</p>
+<p>I’m looking for an internship or entry-level role in data analytics where I can apply my skills to real business problems, learn from experienced professionals, and grow into a data-driven decision maker.</p></div>
+</div></section>
+
+<section id="skills" style="background:var(--soft)"><div class="wrap rv">
+<p class="eyebrow">Skills</p><h2>What I work with</h2>
+<div class="grid2">
+<div class="card" id="bars">
+<div class="skill"><div><span>Python</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+<div class="skill"><div><span>R Programming</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div>
+<div class="skill"><div><span>Statistics</span><span>85%</span></div><div class="bar"><i data-w="85"></i></div></div>
+<div class="skill"><div><span>Data Visualization</span><span>75%</span></div><div class="bar"><i data-w="75"></i></div></div>
+<div class="skill"><div><span>Data Structures &amp; Algorithms</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div>
+</div>
+<div class="card">
+<h3>Tools &amp; Libraries</h3>
+<div class="chips"><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">ggplot2</span><span class="chip">Jupyter</span><span class="chip">RStudio</span><span class="chip">Excel</span><span class="chip">Git &amp; GitHub</span></div>
+<h3 style="margin-top:22px">Concepts</h3>
+<div class="chips"><span class="chip">EDA</span><span class="chip">Hypothesis Testing</span><span class="chip">Regression</span><span class="chip">ANOVA</span><span class="chip">Probability</span><span class="chip">Intro to AI &amp; ML</span></div>
+</div>
+</div></div></section>
+
+<section id="education"><div class="wrap rv">
+<p class="eyebrow">Education</p><h2>Academic journey</h2>
+<div class="tl card">
+<small>Currently in 5th Semester</small>
+<h3>BS Data Analytics, Emerson University, Multan</h3>
+<p>CGPA: 3.76 / 4.00. Coursework: Data Structures &amp; Algorithms, Introduction to AI, Python, R, Statistics, Advanced Statistical Methods.</p>
+</div>
+</div></section>
+
+<section id="projects" style="background:var(--soft)"><div class="wrap rv">
+<p class="eyebrow">Projects</p><h2>Featured work</h2>
+<div class="card proj">
+<h3>Spotify Songs Data Analysis</h3>
+<span class="chip tag">Python</span><span class="chip tag">Pandas</span><span class="chip tag">Seaborn</span>
+<ul>
+<li>Cleaned and preprocessed the Spotify songs dataset, handling missing values, duplicates, and outliers.</li>
+<li>Analyzed audio features such as danceability, energy, tempo, and popularity.</li>
+<li>Visualized trends across genres and artists, with findings shared in a Jupyter Notebook.</li>
+</ul>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv">
+<p class="eyebrow">Contact</p><h2>Let’s work together</h2>
+<div class="grid2">
+<div class="card">
+<div class="row"><em>✉</em><div><small>Email</small><a href="mailto:uzairsaleem0075@gmail.com">uzairsaleem0075@gmail.com</a></div></div>
+<div class="row"><em>☎</em><div><small>Phone</small><a href="tel:+923274863075">0327 4863075</a></div></div>
+<div class="row"><em>⌖</em><div><small>Location</small>Multan, Punjab, Pakistan</div></div>
+</div>
+<form class="card" id="form">
+<input id="n" placeholder="Your name" required>
+<input id="e" type="email" placeholder="Your email" required>
+<textarea id="m" rows="4" placeholder="Your message" required></textarea>
+<button class="btn p" type="submit">Send Message</button>
+</form>
+</div>
+</div></section>
+
+<footer>© <span id="y"></span> Uzair Saleem. Built with HTML, CSS &amp; JavaScript.</footer>
+
+<script>
+(function(){
+var root=document.documentElement;
+try{var t=localStorage.getItem("theme");if(t)root.setAttribute("data-theme",t)}catch(e){}
+var tb=document.getElementById("theme");
+tb.onclick=function(){
+var dark=root.getAttribute("data-theme")?root.getAttribute("data-theme")==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+var nx=dark?"light":"dark";root.setAttribute("data-theme",nx);
+try{localStorage.setItem("theme",nx)}catch(e){}
+};
+var ul=document.getElementById("links");
+document.getElementById("menu").onclick=function(){ul.classList.toggle("open")};
+ul.onclick=function(){ul.classList.remove("open")};
+document.getElementById("y").textContent=new Date().getFullYear();
+var words=["Data Analyst","Data Scientist","Python Developer","Statistician"],wi=0,ci=0,del=false,el=document.getElementById("typed");
+(function tick(){
+var w=words[wi];ci+=del?-1:1;el.textContent=w.slice(0,ci);
+var d=del?50:100;
+if(!del&&ci===w.length){del=true;d=1400}
+else if(del&&ci===0){del=false;wi=(wi+1)%words.length;d=300}
+setTimeout(tick,d);
+})();
+var io=new IntersectionObserver(function(es){
+es.forEach(function(x){
+if(x.isIntersecting){
+x.target.classList.add("in");
+x.target.querySelectorAll("i[data-w]").forEach(function(b){b.style.width=b.dataset.w+"%"});
+io.unobserve(x.target);
+}
+});
+},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(n){io.observe(n)});
+document.getElementById("form").onsubmit=function(ev){
+ev.preventDefault();
+var s=encodeURIComponent("Portfolio message from "+document.getElementById("n").value);
+var b=encodeURIComponent(document.getElementById("m").value+"\n\nFrom: "+document.getElementById("e").value);
+location.href="mailto:uzairsaleem0075@gmail.com?subject="+s+"&body="+b;
+};
+})();
+</script>
+</body>
+</html>
